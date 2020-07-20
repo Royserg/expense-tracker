@@ -1,13 +1,16 @@
 import React, { FC } from 'react'
+import Balance from '../../components/Balance'
+import IncomeExpenses from '../../components/IncomeExpenses'
+import TransactionList from '../../components/TransactionList'
+import AddTransaction from '../../components/AddTransaction'
 
 const Home: FC = () => {
   return (
     <>
-      <h3>Home:</h3>
-      <div>
-        <span>Income</span>
-        <span>Expense</span>
-      </div>
+      <Balance />
+      <IncomeExpenses expense={12.9} income={50.0}/>
+      <TransactionList />
+      <AddTransaction />
     </>
   )
 }
