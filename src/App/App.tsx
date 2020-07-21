@@ -1,6 +1,5 @@
-import React from 'react';
+import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-
 /* Components */
 import Header from '../components/Header'
 /* Views */
@@ -14,7 +13,6 @@ function App() {
     <>
       {/* Material-UI css rest */}
       <CssBaseline />
-
       <Container maxWidth='sm'>
         <Header title={'Expense Tracker'}/>
 
