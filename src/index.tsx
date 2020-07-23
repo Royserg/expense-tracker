@@ -1,11 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
-import App from './App';
+/* Redux */
+import { StoreProvider } from 'easy-peasy'
+import store from './store'
+/* Components */
+import App from './App'
 
 ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
+  <StoreProvider store={store}>
+    <Router>
+      <App />
+    </Router>
+  </StoreProvider>,
   document.getElementById('root')
-);
+)

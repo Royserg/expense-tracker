@@ -18,12 +18,12 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-// Added for material-ui
-    "noImplicitAny": true,
+    // Added for material-ui
+    "noImplicitAny": false,
     "noImplicitThis": true,
     "strictNullChecks": true
   },
   "include": [
     "src"
-  ]
+  ],
 }

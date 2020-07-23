@@ -1,5 +1,7 @@
 import React, { FC } from 'react'
 import { useForm } from 'react-hook-form'
+/* Redux */
+import { useStoreActions } from '../../store'
 /* Styles */
 import useStyles from './styles'
 /* Components */
@@ -9,22 +11,20 @@ import Divider from '@material-ui/core/Divider'
 import Button from '@material-ui/core/Button'
 
 interface Inputs {
-  description: string;
-  amount: number;
+  description: string,
+  amount: number,
 }
-
-// interface AddTransactionProps {
-
-// }
 
 const AddTransaction: FC = () => {
   const classes = useStyles()
+
   const { register, handleSubmit, reset } = useForm<Inputs>()
+  const addTransaction = useStoreActions((actions) => actions.transactions.addTransaction)
 
   const onSubmit = (data: Inputs) => {
-    console.log('submitting form')
-    console.log(data)
-    reset()
+    data = { ...data, amount: Number(data.amount) }
+    addTransaction(data)
+    reset({})
   }
 
   return (
@@ -39,7 +39,7 @@ const AddTransaction: FC = () => {
           margin='normal'
           inputProps={{
             name: 'description',
-            ref: register
+            ref: register,
           }}
         />
         <TextField
@@ -50,7 +50,7 @@ const AddTransaction: FC = () => {
           margin='normal'
           inputProps={{
             name: 'amount',
-            ref: register
+            ref: register,
           }}
         />
         <Button
