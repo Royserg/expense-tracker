@@ -1,5 +1,7 @@
 import React, { FC } from 'react'
+import { NewTransaction } from '../../models'
 import { useForm } from 'react-hook-form'
+import { DateTime } from 'luxon'
 /* Redux */
 import { useStoreActions } from '../../store'
 /* Styles */
@@ -22,8 +24,16 @@ const AddTransaction: FC = () => {
   const addTransaction = useStoreActions((actions) => actions.transactions.addTransaction)
 
   const onSubmit = (data: Inputs) => {
-    data = { ...data, amount: Number(data.amount) }
-    addTransaction(data)
+    const { amount, description } = data
+    const timestamp = DateTime.local().toMillis()
+
+    const newTransaction: NewTransaction = {
+      description,
+      amount: +amount,
+      date: timestamp,
+    }
+
+    addTransaction(newTransaction)
     reset({})
   }
 

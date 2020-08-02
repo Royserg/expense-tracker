@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Switch, Route } from 'react-router-dom'
 /* Components */
 import Header from '../components/Header'
@@ -8,22 +8,22 @@ import Transactions from '../views/Transactions'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Container from '@material-ui/core/Container'
 
-function App() {
+const App: FC = () => {
   return (
     <>
       {/* Material-UI css rest */}
       <CssBaseline />
       <Container maxWidth='sm'>
-        <Header title={'Expense Tracker'}/>
+        <Header title={'Expense Tracker'} />
 
         <Switch>
-          <Route exact path='/' component={Home}/>
-          <Route exact path='/transactions' component={Transactions}/>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/transactions' component={Transactions} />
           {/* <Route exact path='/transactions/:id' component={Transaction}/> */}
         </Switch>
       </Container>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

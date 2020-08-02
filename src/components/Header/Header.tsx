@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography'
 
 
 interface HeaderProps {
-  title: string;
+  title: string,
 }
 
 const Header: FC<HeaderProps> = ({ title }) => {

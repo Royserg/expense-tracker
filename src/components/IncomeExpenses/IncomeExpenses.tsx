@@ -23,7 +23,7 @@ const IncomeExpenses: FC = () => {
       <Divider orientation='vertical' flexItem />
       <div className={classes.valueContainer}>
         <Typography variant='h5' component='h2'>Expense</Typography>
-        <p>-{totalExpense}</p>
+        <p>{totalExpense}</p>
       </div>
     </Paper>
   )

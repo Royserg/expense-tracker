@@ -1,5 +1,6 @@
 import { Transaction, NewTransaction } from '../../models'
 import { Action, action, Computed, computed } from 'easy-peasy'
+import { v4 as uuidv4 } from 'uuid'
 
 export interface TransactionsModel {
   items: Transaction[],
@@ -17,26 +18,31 @@ const dummyTransactions = [
     id: '1',
     description: 'Dummy Transaction 1',
     amount: -199.9,
+    date: 1595684059926,
   },
   {
     id: '2',
     description: 'My side project',
     amount: 25,
+    date: 1595684059926,
   },
   {
     id: '3',
     description: 'Got little extra something',
     amount: 50,
+    date: 1595684059926,
   },
   {
     id: '4',
     description: 'A coffee',
     amount: -15,
+    date: 1595684059926,
   },
   {
     id: '5',
     description: 'Lunch at work',
     amount: -75,
+    date: 1595684059926,
   }
 ]
 
@@ -58,7 +64,7 @@ const transactionsModel: TransactionsModel = {
   /* Actions */
   addTransaction: action((state, payload) => {
     const transaction: Transaction = {
-      id: String(Math.random() * 27),
+      id: uuidv4(),
       ...payload,
     }
     state.items.push(transaction)
