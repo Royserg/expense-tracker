@@ -26,30 +26,12 @@ const dummyTransactions = [
     amount: 25,
     date: 1595684059926,
   },
-  {
-    id: '3',
-    description: 'Got little extra something',
-    amount: 50,
-    date: 1595684059926,
-  },
-  {
-    id: '4',
-    description: 'A coffee',
-    amount: -15,
-    date: 1595684059926,
-  },
-  {
-    id: '5',
-    description: 'Lunch at work',
-    amount: -75,
-    date: 1595684059926,
-  }
 ]
 
 const transactionsModel: TransactionsModel = {
   items: dummyTransactions,
   /* Computed */
-  recentTransactions: computed((state) => state.items.slice(-4)),
+  recentTransactions: computed((state) => state.items.slice(-4).reverse()),
   totalBalance: computed((state) => {
     return state.items.reduce((acc, t) => acc + t.amount, 0).toFixed(2)
   }),
