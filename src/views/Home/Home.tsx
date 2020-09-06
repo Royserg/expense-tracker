@@ -1,13 +1,16 @@
 import React, { FC } from 'react'
+/* Components */
+import Balance from '../../components/Balance'
+import IncomeExpenses from '../../components/IncomeExpenses'
+import TransactionList from '../../components/TransactionList'
+
 
 const Home: FC = () => {
   return (
     <>
-      <h3>Home:</h3>
-      <div>
-        <span>Income</span>
-        <span>Expense</span>
-      </div>
+      <Balance />
+      <IncomeExpenses />
+      <TransactionList />
     </>
   )
 }
