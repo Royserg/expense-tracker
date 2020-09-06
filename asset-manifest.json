@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/expense-tracker/static/js/main.cd9d15f8.chunk.js",
-    "main.js.map": "/expense-tracker/static/js/main.cd9d15f8.chunk.js.map",
+    "main.js": "/expense-tracker/static/js/main.dbd96200.chunk.js",
+    "main.js.map": "/expense-tracker/static/js/main.dbd96200.chunk.js.map",
     "runtime-main.js": "/expense-tracker/static/js/runtime-main.91d22b83.js",
     "runtime-main.js.map": "/expense-tracker/static/js/runtime-main.91d22b83.js.map",
     "static/js/2.db9e0594.chunk.js": "/expense-tracker/static/js/2.db9e0594.chunk.js",
     "static/js/2.db9e0594.chunk.js.map": "/expense-tracker/static/js/2.db9e0594.chunk.js.map",
     "index.html": "/expense-tracker/index.html",
-    "precache-manifest.f0b83f84c0df4fc9e931fa87e7eb1dbe.js": "/expense-tracker/precache-manifest.f0b83f84c0df4fc9e931fa87e7eb1dbe.js",
+    "precache-manifest.b2b8e429e10a58532f32fc8627fd70ae.js": "/expense-tracker/precache-manifest.b2b8e429e10a58532f32fc8627fd70ae.js",
     "service-worker.js": "/expense-tracker/service-worker.js",
     "static/js/2.db9e0594.chunk.js.LICENSE.txt": "/expense-tracker/static/js/2.db9e0594.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.91d22b83.js",
     "static/js/2.db9e0594.chunk.js",
-    "static/js/main.cd9d15f8.chunk.js"
+    "static/js/main.dbd96200.chunk.js"
   ]
 }
