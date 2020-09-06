@@ -10,15 +10,15 @@ import List from '@material-ui/core/List'
 import TransactionListItem from './TransactionListItem'
 
 const TransactionList: FC = () => {
-  const transactions = useStoreState((state) => state.transactions.recentTransactions)
+  const transactions = useStoreState((state) => state.transactions.transactions)
 
   const classes = useStyles()
 
   return (
     <div className={classes.container}>
-      <Typography variant='h5' component='h3'>Recent transactions:</Typography>
+      <Typography variant='h5' component='h3'>Transactions:</Typography>
       <Divider />
-      <List>
+      <List classes={{ root: classes.listContainer }}>
         { transactions.map((t) => {
             return (
               <TransactionListItem

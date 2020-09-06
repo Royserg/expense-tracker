@@ -4,6 +4,10 @@ const useStyles = makeStyles({
   container: {
     marginTop: '2rem',
   },
+  listContainer: {
+    height: '45vh',
+    overflow: 'auto',
+  }
 })
 
 export default useStyles
