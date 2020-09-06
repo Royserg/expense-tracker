@@ -102,7 +102,10 @@ const AddTransactionModal: FC<Props> = ({ isOpen, close }) => {
             <Button onClick={close} color='inherit' classes={{ root: classes.cancelButton }}>
               Cancel
             </Button>
-            <Button type='submit' color='inherit' classes={{ root: classes.confirmButton }}>
+            <Button type='submit' color='secondary' classes={{
+                root: classes.confirmButton,
+              }}
+            >
               Add Transaction
             </Button>
           </DialogActions>

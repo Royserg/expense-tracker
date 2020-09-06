@@ -5,9 +5,9 @@ const useStyles = makeStyles({
     marginTop: '2rem',
   },
   listContainer: {
-    height: '45vh',
+    height: '53vh',
     overflow: 'auto',
-  }
+  },
 })
 
 export default useStyles

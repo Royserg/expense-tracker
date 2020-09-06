@@ -11,16 +11,18 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'flex-end',
     alignItems: 'center',
-    paddingBottom: '1rem',
+    paddingBottom: '1.5rem',
     width: '70%',
     margin: '0 auto',
   },
   confirmButton: {
     background: colors.redAccent,
-    color: 'white',
     border: `1px solid ${colors.redAccent}`,
     marginLeft: '1rem',
-    '&:hover': {
+    '& span': {
+      color: 'white',
+    },
+    '&:hover span': {
       color: colors.redAccent,
     }
   },
