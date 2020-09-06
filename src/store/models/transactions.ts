@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid'
 
 export interface TransactionsModel {
   items: Transaction[],
-  recentTransactions: Computed<TransactionsModel, Transaction[]>,
+  transactions: Computed<TransactionsModel, Transaction[]>,
   totalBalance: Computed<TransactionsModel, string>,
   totalIncome: Computed<TransactionsModel, string>,
   totalExpense: Computed<TransactionsModel, string>,
@@ -22,6 +22,42 @@ const dummyTransactions = [
   },
   {
     id: '2',
+    description: 'Dummy Transaction 1',
+    amount: -199.9,
+    date: 1595684059926,
+  },
+  {
+    id: '3',
+    description: 'Dummy Transaction 1',
+    amount: -199.9,
+    date: 1595684059926,
+  },
+  {
+    id: '4',
+    description: 'Dummy Transaction 1',
+    amount: -199.9,
+    date: 1595684059926,
+  },
+  {
+    id: '5',
+    description: 'Dummy Transaction 1',
+    amount: -199.9,
+    date: 1595684059926,
+  },
+  {
+    id: '6',
+    description: 'Dummy Transaction 1',
+    amount: -199.9,
+    date: 1595684059926,
+  },
+  {
+    id: '7',
+    description: 'Dummy Transaction 1',
+    amount: -199.9,
+    date: 1595684059926,
+  },
+  {
+    id: '8',
     description: 'My side project',
     amount: 25,
     date: 1595684059926,
@@ -31,7 +67,7 @@ const dummyTransactions = [
 const transactionsModel: TransactionsModel = {
   items: dummyTransactions,
   /* Computed */
-  recentTransactions: computed((state) => state.items.slice(-4).reverse()),
+  transactions: computed((state) => state.items.reverse()),
   totalBalance: computed((state) => {
     return state.items.reduce((acc, t) => acc + t.amount, 0).toFixed(2)
   }),
