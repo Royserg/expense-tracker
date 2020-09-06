@@ -1,4 +1,5 @@
 import makeStyles from '@material-ui/core/styles/makeStyles'
+import { colors } from '../../utils/constants'
 
 const useStyles = makeStyles({
   container: {
@@ -8,6 +9,7 @@ const useStyles = makeStyles({
   },
   valueContainer: {
     flexGrow: 1,
+    padding: '0.55rem',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -15,8 +17,20 @@ const useStyles = makeStyles({
   },
   divider: {
     height: '50px',
-    backgroundColor: '#222'
-  }
+    backgroundColor: '#222',
+  },
+  incomeHeading: {
+    marginBottom: '0.5rem',
+    fontWeight: 'bold',
+    color: colors.greenPrimary,
+    letterSpacing: '1px',
+  },
+  expenseHeading: {
+    marginBottom: '0.5rem',
+    fontWeight: 'bold',
+    color: colors.redPrimary,
+    letterSpacing: '1px',
+  },
 })
 
 export default useStyles
