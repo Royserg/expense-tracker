@@ -99,10 +99,10 @@ const AddTransactionModal: FC<Props> = ({ isOpen, close }) => {
           </DialogContent>
 
           <DialogActions classes={{ root: classes.dialogActions }} disableSpacing>
-            <Button onClick={close} className={classes.cancelButton}>
+            <Button onClick={close} color='inherit' classes={{ root: classes.cancelButton }}>
               Cancel
             </Button>
-            <Button type='submit' className={classes.confirmButton}>
+            <Button type='submit' color='inherit' classes={{ root: classes.confirmButton }}>
               Add Transaction
             </Button>
           </DialogActions>
