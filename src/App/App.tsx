@@ -8,7 +8,6 @@ import useStyles from './styles.'
 import Header from '../components/Header'
 /* Views */
 import Home from '../views/Home'
-import Transactions from '../views/Transactions'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Container from '@material-ui/core/Container'
 import BottomAppBar from '../components/BottomAppBar'
@@ -39,9 +38,7 @@ const App: FC = () => {
         <Header title={'Expense Tracker'} />
 
         <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/transactions' component={Transactions} />
-          {/* <Route exact path='/transactions/:id' component={Transaction}/> */}
+          <Route exact path='*' component={Home} />
         </Switch>
 
         <BottomAppBar />
