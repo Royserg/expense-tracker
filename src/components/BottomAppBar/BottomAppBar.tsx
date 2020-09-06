@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 /* Styles */
 import useStyles from './styles'
 /* Components */
@@ -10,11 +10,14 @@ import Fab from '@material-ui/core/Fab'
 
 const BottomAppBar: FC = () => {
   const classes = useStyles()
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
     <>
-      <AddTransactionModal isOpen={isModalOpen} close={() => setIsModalOpen(false)} />
+      <AddTransactionModal
+        isOpen={isModalOpen}
+        close={() => setIsModalOpen(false)}
+      />
       <AppBar
         position='absolute'
         color='transparent'
@@ -23,10 +26,15 @@ const BottomAppBar: FC = () => {
         }}
       >
         <Toolbar classes={{ root: classes.toolbar }}>
-          <Fab color='secondary' aria-label='add' className={classes.fabButton} onClick={handleFABClicked}>
+          <Fab
+            color='secondary'
+            aria-label='add'
+            className={classes.fabButton}
+            onClick={handleFABClicked}
+          >
             +
           </Fab>
-          <NavLink to='/history' className={classes.appBarLink} activeClassName={classes.linkActive}>History</NavLink>
+          {/* <Next Feature> <NavLink to='/history' className={classes.appBarLink} activeClassName={classes.linkActive}>History</NavLink> */}
         </Toolbar>
       </AppBar>
     </>
@@ -34,7 +42,7 @@ const BottomAppBar: FC = () => {
 
   /* Handlers */
   function handleFABClicked(): void {
-    setIsModalOpen(true);
+    setIsModalOpen(true)
   }
 }
 
