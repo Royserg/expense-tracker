@@ -13,24 +13,32 @@ interface TransactionListItemProps {
   amount: number,
 }
 
-const TransactionListItem: FC<TransactionListItemProps> = ({ id, description, amount }) => {
-
+const TransactionListItem: FC<TransactionListItemProps> = ({
+  id,
+  description,
+  amount,
+}) => {
   const classes = useStyles()
-  const deleteTransaction = useStoreActions(actions => actions.transactions.deleteTransaction)
+  const deleteTransaction = useStoreActions(
+    (actions) => actions.transactions.deleteTransaction
+  )
 
   return (
     <ListItem disableGutters dense>
       <Paper
         elevation={2}
         className={clsx(
-            classes.container,
-            (amount > 0) ? classes.greenBorder : classes.redBorder,
-          )
-        }
+          classes.container,
+          amount > 0 ? classes.greenBorder : classes.redBorder
+        )}
       >
         <span>{description}</span>
         <span>{amount}</span>
-        <button className={classes.deleteButton} onClick={handleDelete}>
+        <button
+          className='deleteBtn'
+          title='Delete transaction'
+          onClick={handleDelete}
+        >
           x
         </button>
       </Paper>

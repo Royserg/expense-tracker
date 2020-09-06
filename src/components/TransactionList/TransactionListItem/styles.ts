@@ -1,4 +1,5 @@
 import makeStyles from '@material-ui/core/styles/makeStyles'
+import { colors } from '../../../utils/constants'
 
 const useStyles = makeStyles({
   container: {
@@ -8,17 +9,28 @@ const useStyles = makeStyles({
     width: '90%',
     margin: '0 auto',
     padding: '1rem',
+    '& .deleteBtn': {
+      opacity: '0',
+      position: 'absolute',
+      cursor: 'pointer',
+      left: '-15px',
+      borderRadius: '4px',
+      border: `1px solid ${colors.redPrimary}`,
+      background: colors.redSecondary,
+      color: 'white',
+      padding: '2px 6px',
+      transition: 'opacity 0.2s ease-in',
+    },
+    '&:hover .deleteBtn': {
+      opacity: '1',
+    },
   },
   redBorder: {
-    borderRight: '0.5rem solid red',
+    borderRight: `0.5rem solid ${colors.redPrimary}`,
   },
   greenBorder: {
-    borderRight: '0.5rem solid green',
+    borderRight: `0.5rem solid ${colors.greenPrimary}`,
   },
-  deleteButton: {
-    position: 'absolute',
-    left: '-20px'
-  }
 })
 
 export default useStyles
